@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Computer Engineering Student Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background: linear-gradient(135deg, #18181b 0%, #23272f 100%);
+      font-family: 'Segoe UI', sans-serif;
+      min-height: 100vh;
+    }
+    .highlight {
+      color: #facc15;
+      text-shadow: 0 2px 16px #facc1555;
+    }
+    .glow {
+      box-shadow: 0 4px 32px 0 #facc1533;
+    }
+    .footer-divider {
+      border-top: 1px solid #2d2d2d;
+      margin: 0 auto 1.5rem auto;
+      width: 80%;
+    }
+  </style>
+</head>
+<body class="text-white">
+
+  <!-- Navbar -->
+  <nav class="w-full bg-[#18181b]/90 backdrop-blur sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+      <span class="text-yellow-400 text-xl font-bold tracking-widest">BAVER KOCA</span>
+      <div class="flex items-center space-x-4">
+        <div class="flex space-x-4">
+          <a href="#" class="px-4 py-2 rounded-lg hover:bg-yellow-400/20 transition font-semibold">Home</a>
+          <a href="#projects" class="px-4 py-2 rounded-lg hover:bg-yellow-400/20 transition font-semibold">Projects</a>
+          <a href="#about" class="px-4 py-2 rounded-lg hover:bg-yellow-400/20 transition font-semibold">About</a>
+          <a href="#blog" class="px-4 py-2 rounded-lg hover:bg-yellow-400/20 transition font-semibold">Blog</a>
+          <a href="mailto:your.email@example.com" class="px-4 py-2 rounded-lg hover:bg-yellow-400/20 transition font-semibold">Contact Me</a>
+          <a href="resume.pdf" target="_blank" class="px-4 py-2 rounded-lg hover:bg-yellow-400/20 transition font-semibold">Resume</a>
+        </div>
+        <!-- Theme Toggle Switch -->
+        <div class="ml-4 flex items-center">
+          <span class="mr-2 text-xs text-yellow-400 font-semibold">🌙</span>
+          <button id="theme-toggle" class="relative w-14 h-8 bg-gray-700 rounded-full transition-colors duration-300 focus:outline-none border-2 border-yellow-400 flex items-center" aria-label="Toggle dark/bright mode">
+            <span id="toggle-circle" class="absolute left-1 top-1 w-6 h-6 bg-yellow-400 rounded-full shadow-md transition-all duration-300"></span>
+            <span class="absolute left-2 top-1/2 transform -translate-y-1/2 text-xs font-bold text-white select-none transition-all duration-300" id="dark-label">Dark</span>
+            <span class="absolute right-2 top-1/2 transform -translate-y-1/2 text-xs font-bold text-white select-none transition-all duration-300" id="light-label">Bright</span>
+          </button>
+          <span class="ml-2 text-xs text-yellow-400 font-semibold">☀️</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center px-6">
+    <div class="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 items-center">
+      
+      <!-- Left Content -->
+      <div class="glow p-8 rounded-xl bg-[#18181b]/80">
+        <p class="text-yellow-400 text-3xl md:text-5xl uppercase tracking-widest mb-3 font-extrabold">BAVER KOCA</p>
+        <h1 class="text-lg md:text-2xl font-semibold leading-tight mb-4">
+          I'm a <span class="highlight">Computer Engineering</span> Student
+        </h1>
+        <p class="text-gray-300 mt-2 mb-10 max-w-md text-lg">
+          A passionate learner focused on <span class="text-yellow-400 font-semibold">software development</span> and <span class="text-yellow-400 font-semibold">AI</span>. Always exploring, always building.
+        </p>
+
+        <!-- Social Icons -->
+        <div class="flex space-x-5 mt-6">
+          <a href="https://github.com/BaverKoca" target="_blank" class="w-11 h-11 rounded-full border border-gray-700 flex items-center justify-center hover:border-yellow-400 hover:bg-yellow-400/10 transition group" aria-label="GitHub">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/github.svg" class="w-6 h-6 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition" alt="GitHub" />
+          </a>
+          <a href="https://www.linkedin.com/in/baver-koca" target="_blank" class="w-11 h-11 rounded-full border border-gray-700 flex items-center justify-center hover:border-blue-400 hover:bg-blue-400/10 transition group" aria-label="LinkedIn">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/linkedin.svg" class="w-6 h-6 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition" alt="LinkedIn" />
+          </a>
+          <a href="mailto:baver.koca00@gmail.com" class="w-11 h-11 rounded-full border border-gray-700 flex items-center justify-center hover:border-red-400 hover:bg-red-400/10 transition group" aria-label="Email">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/gmail.svg" class="w-6 h-6 opacity-80 group-hover:opacity-100 group-hover:scale-110 transition" alt="Email" />
+          </a>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 mt-8">
+          <button onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'});" class="px-6 py-2 rounded-lg bg-yellow-400 text-gray-900 font-semibold shadow hover:bg-yellow-300 transition">View Projects</button>
+          <button onclick="window.location.href='mailto:your.email@example.com'" class="px-6 py-2 rounded-lg bg-gray-800 border border-yellow-400 text-yellow-400 font-semibold shadow hover:bg-yellow-400 hover:text-gray-900 transition">Contact Me</button>
+          <button onclick="window.open('resume.pdf', '_blank')" class="px-6 py-2 rounded-lg bg-gray-700 text-white font-semibold shadow hover:bg-gray-600 transition">Download Resume</button>
+        </div>
+      </div>
+
+      <!-- Right Image -->
+      <div class="relative hidden md:block">
+        <img src="https://images.photowall.com/products/69237/lion-close-up.jpg?h=699&q=85" alt="Profile" class="rounded-2xl shadow-2xl object-cover opacity-90 grayscale hover:grayscale-0 hover:opacity-100 transition duration-500 border-4 border-[#23272f]" />
+        <div class="absolute top-0 left-0 w-full h-full border-2 border-yellow-400 rounded-2xl transform translate-x-6 translate-y-6 pointer-events-none"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="max-w-4xl mx-auto py-20 px-4">
+    <h2 class="text-3xl font-bold text-yellow-400 mb-8 text-center">Projects</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-[#23272f] rounded-xl p-6 shadow-lg border border-gray-700 hover:border-yellow-400 transition">
+        <h3 class="text-xl font-semibold mb-2 text-white">AI Chatbot</h3>
+        <p class="text-gray-300 mb-4">A conversational AI chatbot built with Python and NLP libraries, capable of answering user queries in real-time.</p>
+        <a href="https://github.com/baverkoca/ai-chatbot" target="_blank" class="text-yellow-400 hover:underline">See on GitHub</a>
+      </div>
+      <div class="bg-[#23272f] rounded-xl p-6 shadow-lg border border-gray-700 hover:border-yellow-400 transition">
+        <h3 class="text-xl font-semibold mb-2 text-white">Personal Portfolio</h3>
+        <p class="text-gray-300 mb-4">A modern, responsive personal website to showcase my projects, skills, and contact information. Built with HTML, CSS, and Tailwind.</p>
+        <a href="https://github.com/baverkoca/personal-portfolio" target="_blank" class="text-yellow-400 hover:underline">See on GitHub</a>
+      </div>
+      <div class="bg-[#23272f] rounded-xl p-6 shadow-lg border border-gray-700 hover:border-yellow-400 transition">
+        <h3 class="text-xl font-semibold mb-2 text-white">Task Manager App</h3>
+        <p class="text-gray-300 mb-4">A full-stack web app for managing daily tasks, featuring user authentication and a clean UI. Built with React and Node.js.</p>
+        <a href="https://github.com/baverkoca/task-manager" target="_blank" class="text-yellow-400 hover:underline">See on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="max-w-4xl mx-auto py-20 px-4">
+    <h2 class="text-3xl font-bold text-yellow-400 mb-8 text-center">About</h2>
+    <div class="bg-[#23272f] rounded-xl p-8 shadow-lg border border-gray-700 text-gray-300 text-lg">
+      <p>Hello! I'm Baver Koca, a Computer Engineering student passionate about building innovative software and exploring the world of AI. I enjoy learning new technologies, collaborating on projects, and solving real-world problems through code. My journey is driven by curiosity and a desire to make a positive impact in tech.</p>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="max-w-4xl mx-auto py-20 px-4">
+    <h2 class="text-3xl font-bold text-yellow-400 mb-8 text-center">Blog</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-[#23272f] rounded-xl p-6 shadow-lg border border-gray-700">
+        <h3 class="text-xl font-semibold mb-2 text-white">How I Got Started in AI</h3>
+        <p class="text-gray-300 mb-4">A brief story about my journey into artificial intelligence, the resources I used, and tips for beginners.</p>
+        <a href="#" class="text-yellow-400 hover:underline">Read More</a>
+      </div>
+      <div class="bg-[#23272f] rounded-xl p-6 shadow-lg border border-gray-700">
+        <h3 class="text-xl font-semibold mb-2 text-white">Building My First Portfolio</h3>
+        <p class="text-gray-300 mb-4">Lessons learned and best practices from designing and coding my personal website using HTML and Tailwind CSS.</p>
+        <a href="#" class="text-yellow-400 hover:underline">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Me Section -->
+  <section id="contact" class="max-w-4xl mx-auto py-20 px-4">
+    <h2 class="text-3xl font-bold text-yellow-400 mb-8 text-center">Contact Me</h2>
+    <div class="bg-[#23272f] rounded-xl p-8 shadow-lg border border-gray-700 text-gray-300 text-lg text-center">
+      <p class="mb-6">Interested in collaborating or have any questions? Feel free to reach out!</p>
+      <a href="mailto:your.email@example.com" class="inline-block px-6 py-3 rounded-lg bg-yellow-400 text-gray-900 font-semibold shadow hover:bg-yellow-300 transition">Send Email</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-8 text-gray-400 text-sm bg-transparent">
+    <div class="footer-divider"></div>
+    © 2025 BAVER KOCA | All rights reserved.<br>
+    <span class="text-gray-500">Developed by Baver Koca</span>
+  </footer>
+
+  <!-- Floating Home Button -->
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="fixed right-6 bottom-6 z-50 bg-yellow-400/60 text-gray-900 font-bold rounded-full shadow-2xl w-12 h-12 flex items-center justify-center text-2xl border-4 border-white/30 ring-2 ring-yellow-300/40 transition-all duration-300 opacity-40 hover:opacity-100 hover:bg-yellow-400 hover:scale-110 group" aria-label="Back to Top">
+    <svg class="w-6 h-6 group-hover:animate-bounce" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+  </button>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const toggleCircle = document.getElementById('toggle-circle');
+    const darkLabel = document.getElementById('dark-label');
+    const lightLabel = document.getElementById('light-label');
+    const html = document.documentElement;
+    const body = document.body;
+    let dark = true;
+    themeToggle.addEventListener('click', () => {
+      dark = !dark;
+      if (dark) {
+        html.classList.remove('light');
+        body.style.background = 'linear-gradient(135deg, #18181b 0%, #23272f 100%)';
+        body.classList.remove('text-gray-900');
+        body.classList.add('text-white');
+        toggleCircle.style.transform = 'translateX(0)';
+        darkLabel.style.opacity = '1';
+        lightLabel.style.opacity = '0.5';
+      } else {
+        html.classList.add('light');
+        body.style.background = 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)';
+        body.classList.remove('text-white');
+        body.classList.add('text-gray-900');
+        toggleCircle.style.transform = 'translateX(24px)';
+        darkLabel.style.opacity = '0.5';
+        lightLabel.style.opacity = '1';
+      }
+    });
+    // Set initial state
+    toggleCircle.style.transform = 'translateX(0)';
+    darkLabel.style.opacity = '1';
+    lightLabel.style.opacity = '0.5';
+  </script>
+
+</body>
+</html>
